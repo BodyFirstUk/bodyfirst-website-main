@@ -18,6 +18,54 @@
 
     { "source": "/physio", "destination": "/services/physio", "permanent": true },
     { "source": "/physio/", "destination": "/services/physio", "permanent": true },
-    { "source": "/physio.html", "destination": "/services/physio", "permanent": true }
+    { "source": "/physio.html", "destination": "/services/physio", "permanent": true },
+
+    { "source": "/physiotherapy", "destination": "/services/physio", "permanent": true },
+    { "source": "/physiotherapy/", "destination": "/services/physio", "permanent": true },
+    { "source": "/physiotherapy.html", "destination": "/services/physio", "permanent": true },
+
+    { "source": "/rehabilitation-pain-relief", "destination": "/services", "permanent": true },
+    { "source": "/rehabilitation-pain-relief/", "destination": "/services", "permanent": true },
+    { "source": "/rehabilitation-pain-relief.html", "destination": "/services", "permanent": true },
+
+    { "source": "/reviews", "destination": "/contact", "permanent": true },
+    { "source": "/reviews/", "destination": "/contact", "permanent": true },
+    { "source": "/reviews.html", "destination": "/contact", "permanent": true },
+
+    { "source": "/lets-talk-about-what-to", "destination": "/contact", "permanent": true },
+    { "source": "/lets-talk-about-what-to/", "destination": "/contact", "permanent": true },
+    { "source": "/lets-talk-about-what-to.html", "destination": "/contact", "permanent": true },
+
+    { "source": "/shock-wave-therapy-2", "destination": "/services", "permanent": true },
+    { "source": "/shock-wave-therapy-2/", "destination": "/services", "permanent": true },
+    { "source": "/shock-wave-therapy-2.html", "destination": "/services", "permanent": true },
+
+    { "source": "/opening-hours", "destination": "/contact", "permanent": true },
+    { "source": "/opening-hours/", "destination": "/contact", "permanent": true },
+    { "source": "/opening-hours.html", "destination": "/contact", "permanent": true },
+
+    { "source": "/map", "destination": "/contact", "permanent": true },
+    { "source": "/map/", "destination": "/contact", "permanent": true },
+    { "source": "/map.html", "destination": "/contact", "permanent": true },
+
+    { "source": "/cancellation-policy", "destination": "/about", "permanent": true },
+    { "source": "/cancellation-policy/", "destination": "/about", "permanent": true },
+    { "source": "/cancellation-policy.html", "destination": "/about", "permanent": true },
+
+    { "source": "/piriformas-syndrome", "destination": "/what-we-treat", "permanent": true },
+    { "source": "/piriformas-syndrome/", "destination": "/what-we-treat", "permanent": true },
+    { "source": "/piriformas-syndrome.html", "destination": "/what-we-treat", "permanent": true },
+
+    { "source": "/sports", "destination": "/services", "permanent": true },
+    { "source": "/sports/", "destination": "/services", "permanent": true },
+    { "source": "/sports.html", "destination": "/services", "permanent": true },
+
+    { "source": "/we-can-treat-a-number-of-conditions", "destination": "/what-we-treat", "permanent": true },
+    { "source": "/we-can-treat-a-number-of-conditions/", "destination": "/what-we-treat", "permanent": true },
+    { "source": "/we-can-treat-a-number-of-conditions.html", "destination": "/what-we-treat", "permanent": true }
+  ],
+
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
