@@ -219,9 +219,9 @@ const Home = () => {
             </div>
 
             <a
-              href="https://www.google.com/maps/place/BODY+FIRST+UK+-+Physio+%26+Wellbeing+Clinic"
+              href="https://www.google.com/search?q=bodyfirst+uk&rlz=1C5CHFA_enLK1074LK1074&oq=body&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDwyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYOTIGCAYQRRg8MgYIBxBFGDzSAQgxNjY4ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8#lrd=0x48760b5ea482eda5:0xb1dababe47d75f95,1,,,,"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="text-slate-900 font-black flex items-center gap-2 hover:text-teal-600 transition-colors"
             >
               Watch All Google Reviews <span className="text-teal-600">→</span>
