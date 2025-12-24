@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import treatmentCategories from "../data/whatWeTreatData";
 import ScrollAnimation from "../components/ScrollAnimation";
 import Accordion from "../components/Accordion";
+import SEO from '../components/SEO';
 
 const WhatWeTreatDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -38,6 +39,11 @@ const WhatWeTreatDetail = () => {
 
   return (
     <div className="min-h-screen bg-transparent">
+      <SEO
+        title={`${category.title} | Body First UK`}
+        description={detailContent.overview || 'Expert physiotherapy and treatment for conditions in Hampton Hill, London.'}
+        canonical={`https://bodyfirst.uk/what-we-treat/${category.slug}`}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Animated Background */}

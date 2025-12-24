@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import InsuranceMarquee from '../components/InsuranceMarquee';
 import HeadingScrollAnimation from '../components/HeadingScrollAnimation';
 import SEO from '../components/SEO';
+import { seoConfig } from '../data/seoConfig';
 import { siteContent } from '../data/content';
 import { servicesData } from '../data/servicesData';
 import AntigravityCanvas from '../components/AntigravityCanvas';
@@ -11,7 +12,7 @@ import AntigravityCanvas from '../components/AntigravityCanvas';
 const Home = () => {
   return (
     <div>
-      <SEO />
+      <SEO title={seoConfig.home.title} description={seoConfig.home.description} canonical={'https://bodyfirst.uk/'} />
       {/* Hero Section (your existing Hero; will look teal if Option A is applied) */}
       <Hero
         title="Move Better Feel Stronger"

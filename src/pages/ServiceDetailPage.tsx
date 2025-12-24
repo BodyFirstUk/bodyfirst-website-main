@@ -3,6 +3,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { findServiceBySlug } from "../data/servicesData";
 import { useEffect } from "react";
+import SEO from '../components/SEO';
 
 const ServiceDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -29,6 +30,11 @@ const ServiceDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-transparent">
+      <SEO
+        title={`${service.name} | ${'Body First UK'}`}
+        description={service.shortDescription || service.heroDescription || 'Expert physiotherapy services at Body First UK in Hampton Hill, London.'}
+        canonical={`https://bodyfirst.uk/services/${service.slug}`}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         {/* Animated Background Elements */}
