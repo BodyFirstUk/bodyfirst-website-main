@@ -1,0 +1,23 @@
+{
+  "redirects": [
+    { "source": "/about-us", "destination": "/about", "permanent": true },
+    { "source": "/about-us/", "destination": "/about", "permanent": true },
+    { "source": "/about-us.html", "destination": "/about", "permanent": true },
+
+    { "source": "/contact-us", "destination": "/contact", "permanent": true },
+    { "source": "/contact-us/", "destination": "/contact", "permanent": true },
+    { "source": "/contact-us.html", "destination": "/contact", "permanent": true },
+
+    { "source": "/book-an-appointment", "destination": "/book", "permanent": true },
+    { "source": "/book-an-appointment/", "destination": "/book", "permanent": true },
+    { "source": "/book-an-appointment.html", "destination": "/book", "permanent": true },
+
+    { "source": "/price-list", "destination": "/prices", "permanent": true },
+    { "source": "/price-list/", "destination": "/prices", "permanent": true },
+    { "source": "/price-list.html", "destination": "/prices", "permanent": true },
+
+    { "source": "/physio", "destination": "/services/physio", "permanent": true },
+    { "source": "/physio/", "destination": "/services/physio", "permanent": true },
+    { "source": "/physio.html", "destination": "/services/physio", "permanent": true }
+  ]
+}
