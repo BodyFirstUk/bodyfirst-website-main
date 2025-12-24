@@ -295,7 +295,7 @@ const Home = () => {
 
                   {/* Persistent Description */}
                   <div className="absolute bottom-6 left-6 right-6 transition-transform duration-500 group-hover:-translate-y-2">
-                    <p className="text-xs uppercase tracking-widest font-black text-teal-400 mb-2 drop-shadow-md">{member.qualifications}</p>
+                    <p className="text-xs uppercase tracking-widest font-black text-teal-400 mb-2 drop-shadow-md whitespace-pre-line">{member.qualifications}</p>
                     <p className="text-sm font-medium leading-relaxed text-white drop-shadow-md">{member.description}</p>
                   </div>
                 </div>

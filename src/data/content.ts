@@ -199,9 +199,9 @@ export const siteContent = {
 
   team: [
     {
-      name: "Praveena Thiruvasager",
+      name: "Praveena Thiruvasagar",
       role: "Senior Physiotherapist",
-      qualifications: "BSc in Physiotherapy • MSc in Advanced Physiotherapy • MPhil in Shockwave Therapy and Sports Medicine and Exercise Sciences • CSP • Chartered Senior Physiotherapist• HCPC registered",
+      qualifications: "• CSP Charted Senior Physiotherapist  • HCPC Registered\n \n• BSc in Physiotherapy • MSc in Advanced Physiotherapy • MPhil in Shockwave Therapy and Sports Medicine and Exercise Sciences",
       description:
         "Senior physiotherapist with extensive experience in sports and musculoskeletal rehabilitation. Focuses on evidence-based care, complex rehab, and advanced modalities including shockwave therapy.",
       image: "/images/Aboutus/praveena.png",
@@ -209,16 +209,16 @@ export const siteContent = {
     {
       name: "Ivaylo Todorov",
       role: "Senior Physiotherapist",
-      qualifications: "CSP • Chartered Senior Physiotherapist • Chiropractic Training",
+      qualifications: "• CSP Charted Senior Physiotherapist  • HCPC Registered\n\n• Chiropractic Training",
       description:
         "Highly experienced physiotherapist with a strong NHS background. Interests include neuro rehabilitation, respiratory care, and spine-related management using a comprehensive patient-centred approach.",
       image: "/images/Aboutus/IvayloTodorov.jpeg",
     },
     {
       name: "Rachael Watkeys",
-      role: "Myotherapist • Sports Massage Therapist",
+      role: "• Myotherapist • Sports Massage Therapist",
       qualifications:
-        "BAppSci (Human Movement) • AdDip (Myotherapy) • PGCE • ITEC",
+        "• BAppSci (Human Movement) • AdDip (Myotherapy) • PGCE • ITEC",
       description:
         "Experienced myotherapist with a strong foundation in human movement and soft tissue therapy. Specialises in myofascial release, trigger point techniques, dry needling, and sports-focused recovery.",
       image: "/images/Aboutus/Rachael.jpeg",
@@ -226,7 +226,7 @@ export const siteContent = {
     {
       name: "Alisha Abdala",
       role: "Sports Massage Therapist",
-      qualifications: "BSc (Hons) Sport Health and Exercise",
+      qualifications: "• BSc (Hons) Sport Health and Exercise",
       description:
         "Ex British gymnast and qualified sports massage therapist with a special interest in the thoracic and lumbar spine. Also certified in cupping therapy, lymphatic drainage, and sports injury rehabilitation. Focuses on releasing tension and correcting movement imbalances caused by repetitive activity or injury.",
       image: "/images/Aboutus/neww.jpeg",
@@ -234,7 +234,7 @@ export const siteContent = {
     {
       name: "Mihai Apostol",
       role: "Sports Massage Therapist",
-      qualifications: "BSc (Hons) Osteopathic Medicine (to complete 2026)",
+      qualifications: "• BSc (Hons) Osteopathic Medicine (to complete 2026)",
       description:
         "Experienced sports massage therapist with over a decade of work in improving human movement. Currently studying osteopathy at the British School of Osteopathic Medicine, with a strong interest in biomechanics, posture, and restoring optimal movement patterns. Supports patients with postural strain, asymmetrical patterns, and sedentary lifestyle-related issues.",
       image: "/images/Aboutus/newone.jpeg",

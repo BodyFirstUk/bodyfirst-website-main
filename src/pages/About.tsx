@@ -181,7 +181,7 @@ const About = () => {
                   <p className="text-teal-600 font-black uppercase text-xs tracking-widest mb-3">
                     {member.role}
                   </p>
-                  <div className="inline-block px-4 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold border border-slate-200">
+                  <div className="inline-block px-6 py-2 rounded-2xl bg-slate-100 text-slate-600 text-xs font-bold border border-slate-200 whitespace-pre-line mx-2">
                     {member.qualifications}
                   </div>
                 </div>
