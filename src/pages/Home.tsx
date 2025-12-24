@@ -219,7 +219,7 @@ const Home = () => {
             </div>
 
             <a
-              href="https://www.google.com/search?q=bodyfirst+uk&rlz=1C5CHFA_enLK1074LK1074&oq=body&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDwyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYOTIGCAYQRRg8MgYIBxBFGDzSAQgxNjY4ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8#lrd=0x48760b5ea482eda5:0xb1dababe47d75f95,1,,,,"
+              href="https://www.google.com/maps/place/BODY+FIRST+UK+-+Physio+%26+Wellbeing+Clinic/@51.4256961,-0.359431,17z/data=!4m18!1m9!3m8!1s0x48760b5ea482eda5:0xb1dababe47d75f95!2sBODY+FIRST+UK+-+Physio+%26+Wellbeing+Clinic!8m2!3d51.4256928!4d-0.3568561!9m1!1b1!16s%2Fg%2F11dylwm6fj!3m7!1s0x48760b5ea482eda5:0xb1dababe47d75f95!8m2!3d51.4256928!4d-0.3568561!9m1!1b1!16s%2Fg%2F11dylwm6fj?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-900 font-black flex items-center gap-2 hover:text-teal-600 transition-colors"
