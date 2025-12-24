@@ -364,11 +364,11 @@ const Home = () => {
               { icon: "🎯", title: "Personalised Care", color: "bg-emerald-50 text-emerald-600", desc: "Tailored treatment plans designed specifically for your unique recovery goals." },
               { icon: "⚡", title: "Advanced Techniques", color: "bg-teal-50 text-teal-600", desc: "Latest evidence-based treatments and cutting-edge rehabilitation equipment." },
               { icon: "📍", title: "Central Location", color: "bg-slate-50 text-slate-600", desc: "Convenient London location with excellent transport links and local parking." },
-              { i: "🕐", title: "Flexible Hours", color: "bg-teal-50 text-teal-600", desc: "Extended opening hours including evenings and Sundays to fit your busy life." },
+              { icon: "🕐", title: "Flexible Hours", color: "bg-teal-50 text-teal-600", desc: "Extended opening hours including evenings and Sundays to fit your busy life." },
               { icon: "💷", title: "Transparent Pricing", color: "bg-emerald-50 text-emerald-600", desc: "No hidden fees. Affordable professional care with major insurance accepted." }
             ].map((item, index) => (
               <ScrollAnimation key={index} className="group p-10 rounded-[2.5rem] bg-white border border-slate-200 shadow-sm hover:border-teal-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-4 transition-all duration-300" variant="fade-up">
-                <div className={`w-16 h-16 rounded-2xl ${item.color} flex items-center justify-center text-3xl mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>{item.icon || (item as any).i}</div>
+                <div className={`w-16 h-16 rounded-2xl ${item.color} flex items-center justify-center text-3xl mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>{item.icon}</div>
                 <h3 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">{item.title}</h3>
                 <p className="text-slate-600 leading-relaxed font-medium">{item.desc}</p>
               </ScrollAnimation>
