@@ -56,14 +56,10 @@ const ContactForm = () => {
 
         setLoading(false);
         if (res.ok) {
-          const json = await res.json().catch(() => null);
-          // FormSubmit returns { success: true } on success
-          if (!json || json.success === true) {
-            finishSuccess();
-          } else {
-            const msg = (json && (json.message || json.error)) || `Server returned ${res.status}`;
-            setErrorMessage(msg);
-          }
+          // Treat any HTTP 2xx response as a success for FormSubmit.
+          // FormSubmit may return a message payload rather than a `success: true` flag,
+          // so prefer the HTTP status as the primary indicator.
+          finishSuccess();
         } else {
           let msg = `Server returned ${res.status}`;
           try {
