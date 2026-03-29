@@ -22,6 +22,28 @@ const Home = () => {
         ctaSecondary="Contact Us"
         backgroundVideo="/videos/hero.mp4"
       />
+	  {/* 
+        SEO + User Intro Section
+        Add this between </Hero> and the Quick Overview Cards section
+        This gives Google a keyword-rich visible text block before it reaches the team bios
+      */}
+      <section className="py-12 bg-gradient-to-b from-slate-50 to-white">
+        <div className="container px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-4 tracking-tight">
+              Your Trusted Physiotherapy Clinic in Hampton Hill, London
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Body First UK is a specialist physiotherapy and wellness clinic offering expert treatment for 
+              back pain, sports injuries, neck pain, shoulder problems, knee conditions, and post-surgical 
+              rehabilitation. Our HCPC and CSP registered physiotherapists deliver personalised care using 
+              advanced techniques including sports massage, dry needling, shockwave therapy, and ultrasound 
+              therapy. With 200+ five-star Google reviews, transparent pricing from £65, and all major health 
+              insurance accepted, we're here to help you move better and live pain-free.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Quick Overview Cards - Separated Section */}
       <section className="py-16 bg-white/80 backdrop-blur-sm">
