@@ -11,8 +11,8 @@ interface SEOProps {
 }
 
 const SEO = ({
-    title = 'Hampton Hill Physiotherapy | Pain Relief & Injury Care',
-    description = 'Trusted physiotherapy clinic in Hampton Hill. Specialising in pain relief, sports injuries & rehabilitation. HCPC registered therapists. Insurance accepted. Call 0203 818 1238.',
+    title = 'Expert Physiotherapy London | Body First UK Clinic',
+    description = 'Expert physiotherapy & wellness clinic in Hampton Hill, London. Sports massage, dry needling, shockwave therapy & more. HCPC & CSP registered. Insurance accepted. From £65. Book online today.',
     canonical,
     ogImage = 'https://bodyfirst.uk/images/social-share-1200x630.png',
     ogType = 'website',
@@ -66,7 +66,7 @@ const SEO = ({
         updateMetaTag('og:image', ogImage, true);
         updateMetaTag('og:image:width', '1200', true);
         updateMetaTag('og:image:height', '630', true);
-        updateMetaTag('og:image:alt', 'Body First UK - Your Local Physio in Hampton Hill for Pain Relief & Rehabilitation', true);
+        updateMetaTag('og:image:alt', 'Body First UK - Expert Physiotherapy & Wellness Clinic in Hampton Hill, London', true);
         updateMetaTag('og:locale', 'en_GB', true);
         updateMetaTag('og:site_name', 'Body First UK', true);
 
@@ -76,112 +76,115 @@ const SEO = ({
         updateMetaTag('twitter:title', title);
         updateMetaTag('twitter:description', description);
         updateMetaTag('twitter:image', ogImage);
-        updateMetaTag('twitter:image:alt', 'Body First UK - Your Local Physio in Hampton Hill for Pain Relief & Rehabilitation');
+        updateMetaTag('twitter:image:alt', 'Body First UK - Expert Physiotherapy & Wellness Clinic in Hampton Hill, London');
         updateMetaTag('twitter:site', '@bodyfirstuk');
 
         // Theme Color
         updateMetaTag('theme-color', '#0d9488');
 
-        // Add JSON-LD Schema only on homepage
-        if (location.pathname === '/') {
-            let script = document.querySelector('script[type="application/ld+json"]');
+        // --- Structured Data (JSON-LD) ---
+        // Remove any previously injected schema scripts by this component
+        document.querySelectorAll('script[data-seo-component]').forEach(el => el.remove());
 
-            if (!script) {
-                script = document.createElement('script');
-                script.setAttribute('type', 'application/ld+json');
-                document.head.appendChild(script);
-            }
+        const injectSchema = (data: object) => {
+            const script = document.createElement('script');
+            script.setAttribute('type', 'application/ld+json');
+            script.setAttribute('data-seo-component', 'true');
+            script.textContent = JSON.stringify(data);
+            document.head.appendChild(script);
+        };
 
-            const schemaData = {
-                "@context": "https://schema.org",
-                "@type": "MedicalBusiness",
-                "name": "Body First UK",
-                "alternateName": "BODY FIRST UK - Physio & Wellbeing Clinic",
-                "url": baseUrl,
-                "logo": `${baseUrl}/images/logo.png`,
-                "image": ogImage,
-                "description": "Expert physiotherapy and wellness clinic in Hampton Hill, London, offering comprehensive treatment for musculoskeletal conditions, sports injuries, chronic pain, and rehabilitation.",
-                "telephone": "+442038181238",
-                "email": "info@bodyfirst.uk",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "38 High Street, Hampton Hill",
-                    "addressLocality": "Hampton",
-                    "addressRegion": "London",
-                    "postalCode": "TW12 1PD",
-                    "addressCountry": "GB"
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": "51.4256928",
-                    "longitude": "-0.3568561"
-                },
-                "areaServed": {
-                    "@type": "City",
-                    "name": "Hampton Hill"
-                },
-                "openingHoursSpecification": [
-                    {
-                        "@type": "OpeningHoursSpecification",
-                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                        "opens": "09:00",
-                        "closes": "20:00"
-                    },
-                    {
-                        "@type": "OpeningHoursSpecification",
-                        "dayOfWeek": "Sunday",
-                        "opens": "11:00",
-                        "closes": "20:00"
-                    }
+        // Homepage schemas are handled statically in index.html (Physiotherapy, FAQPage, BreadcrumbList)
+        // Only inject schemas dynamically for inner pages
+        if (location.pathname !== '/') {
+
+            // --- BreadcrumbList (all inner pages) ---
+            const breadcrumbMap: Record<string, { name: string; url: string }[]> = {
+                '/services': [
+                    { name: 'Home', url: baseUrl },
+                    { name: 'Services', url: `${baseUrl}/services` }
                 ],
-                "priceRange": "££",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "200",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                },
-                "sameAs": [
-                    "https://www.facebook.com/share/17pz212NhW/",
-                    "https://www.instagram.com/bodyfirstuk",
-                    "https://twitter.com/bodyfirstuk",
-                    "https://www.google.com/maps/place/BODY+FIRST+UK+-+Physio+%26+Wellbeing+Clinic/@51.4256928,-0.3568561,17z"
+                '/what-we-treat': [
+                    { name: 'Home', url: baseUrl },
+                    { name: 'What We Treat', url: `${baseUrl}/what-we-treat` }
                 ],
-                "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "Physiotherapy Services",
-                    "itemListElement": [
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "MedicalTherapy",
-                                "name": "Physiotherapy",
-                                "description": "Expert assessment and treatment for musculoskeletal conditions, pain relief, and injury rehabilitation"
-                            }
-                        },
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "MedicalTherapy",
-                                "name": "Sports Massage",
-                                "description": "Deep tissue massage for recovery, flexibility, and performance enhancement"
-                            }
-                        },
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "MedicalTherapy",
-                                "name": "Shockwave Therapy",
-                                "description": "Non-invasive treatment for chronic injuries and pain management"
-                            }
-                        }
-                    ]
-                }
+                '/about': [
+                    { name: 'Home', url: baseUrl },
+                    { name: 'About Us', url: `${baseUrl}/about` }
+                ],
+                '/prices': [
+                    { name: 'Home', url: baseUrl },
+                    { name: 'Pricing & Insurance', url: `${baseUrl}/prices` }
+                ],
+                '/contact': [
+                    { name: 'Home', url: baseUrl },
+                    { name: 'Contact', url: `${baseUrl}/contact` }
+                ],
+                '/why-us': [
+                    { name: 'Home', url: baseUrl },
+                    { name: 'Why Us', url: `${baseUrl}/why-us` }
+                ],
             };
 
-            script.textContent = JSON.stringify(schemaData);
+            // Match exact path or auto-generate crumbs for sub-pages
+            const pathSegments = location.pathname.split('/').filter(Boolean);
+            let crumbs = breadcrumbMap[location.pathname];
+
+            if (!crumbs && pathSegments.length >= 2) {
+                const parentPath = `/${pathSegments[0]}`;
+                const parentCrumbs = breadcrumbMap[parentPath];
+                if (parentCrumbs) {
+                    crumbs = [
+                        ...parentCrumbs,
+                        {
+                            name: pathSegments[pathSegments.length - 1]
+                                .split('-')
+                                .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                                .join(' '),
+                            url: currentUrl
+                        }
+                    ];
+                }
+            }
+
+            if (crumbs && crumbs.length > 0) {
+                injectSchema({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": crumbs.map((crumb, index) => ({
+                        "@type": "ListItem",
+                        "position": index + 1,
+                        "name": crumb.name,
+                        "item": crumb.url
+                    }))
+                });
+            }
+
+            // --- Service page schema for /services/* ---
+            if (location.pathname.startsWith('/services/')) {
+                const serviceName = pathSegments[pathSegments.length - 1]
+                    .split('-')
+                    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                    .join(' ');
+
+                injectSchema({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": serviceName,
+                    "provider": {
+                        "@type": "Physiotherapy",
+                        "name": "Body First UK",
+                        "url": baseUrl
+                    },
+                    "areaServed": {
+                        "@type": "City",
+                        "name": "London"
+                    },
+                    "url": currentUrl
+                });
+            }
         }
+
     }, [title, description, canonical, ogImage, ogType, noindex, location.pathname, currentUrl]);
 
     return null;
