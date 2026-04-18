@@ -88,7 +88,7 @@ const Home = () => {
               </div>
             </Link>
 
-            <a href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login" target="_blank" rel="noopener noreferrer" className="group">
+            <a href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login" target="_blank" rel="noopener noreferrer" className="group">
               <div className="h-full p-8 rounded-3xl bg-teal-600 shadow-[0_20px_50px_rgba(20,184,166,0.3)] hover:shadow-[0_25px_60px_rgba(20,184,166,0.4)] transition-all duration-500 hover:-translate-y-2 border border-teal-500">
                 <div className="w-14 h-14 mb-6 rounded-2xl bg-white/20 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-500">📅</div>
                 <h3 className="text-2xl font-black text-white mb-4 tracking-tight">Book Now</h3>
@@ -426,7 +426,7 @@ const Home = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
-                href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+                href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center px-12 py-6 bg-teal-500 text-white rounded-full font-black text-xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(20,184,166,0.5)]"

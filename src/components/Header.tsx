@@ -189,7 +189,7 @@ const Header = () => {
             </Link>
 
             <a
-              href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+              href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white hover:bg-teal-50 text-teal-900 text-sm font-bold shadow-lg transition-all duration-300 hover:scale-105"
@@ -241,7 +241,7 @@ const Header = () => {
             ))}
 
             <a
-              href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+              href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}

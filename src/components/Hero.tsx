@@ -12,7 +12,7 @@ interface HeroProps {
   backgroundImage?: string;
 }
 
-const BOOKING_URL = "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login";
+const BOOKING_URL = "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login";
 
 const Hero = ({
   title,

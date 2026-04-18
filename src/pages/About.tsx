@@ -322,7 +322,7 @@ const About = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-              href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+              href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-teal-500 text-white rounded-full font-black text-xl hover:bg-teal-400 hover:scale-105 transition-all shadow-[0_0_30px_rgba(20,184,166,0.4)]"

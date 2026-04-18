@@ -96,7 +96,7 @@ const WhatWeTreatDetail = () => {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+                href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 hover:shadow-2xl shadow-teal-500/20"
@@ -292,7 +292,7 @@ const WhatWeTreatDetail = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
               <a
-                href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+                href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-teal-700 px-12 py-5 rounded-full font-black text-xl hover:bg-teal-50 transition-colors shadow-2xl"

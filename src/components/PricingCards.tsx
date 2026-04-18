@@ -53,7 +53,7 @@ const PricingCards = () => {
                                         <span className="text-3xl font-black text-slate-900 leading-none group-hover:text-teal-600 transition-colors">{item.price}</span>
                                     </div>
                                     <a
-                                        href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+                                        href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center bg-slate-900 text-white font-black py-3 px-5 rounded-2xl hover:bg-teal-600 transition-all duration-300 text-sm shadow-lg shadow-slate-900/10 group-hover:shadow-teal-600/20"

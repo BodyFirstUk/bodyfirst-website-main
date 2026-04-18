@@ -70,7 +70,7 @@ const PricesInsurance = () => {
                 </p>
               </div>
               <a
-                href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+                href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center px-10 py-5 bg-teal-500 text-white rounded-full font-black text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-[0_10px_30px_rgba(20,184,166,0.3)] shrink-0"
@@ -177,7 +177,7 @@ const PricesInsurance = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-              href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+              href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-teal-500 text-white rounded-full font-black text-xl hover:bg-teal-400 hover:scale-105 transition-all shadow-[0_0_30px_rgba(20,184,166,0.4)]"

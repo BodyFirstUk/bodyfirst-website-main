@@ -222,7 +222,7 @@ const Contact = () => {
               Call Specialist Now
             </a>
             <a
-              href="https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login"
+              href="https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 border-2 border-white/30 text-white rounded-full font-black text-xl hover:bg-white/10 transition-all backdrop-blur-sm shadow-xl"
