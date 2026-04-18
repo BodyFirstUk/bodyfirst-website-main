@@ -1,0 +1,10 @@
+# Body First UK - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bodyfirst.uk/sitemap.xml
+
+# AI Crawler Guide
+# llms.txt: https://bodyfirst.uk/llms.txt

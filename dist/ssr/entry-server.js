@@ -1918,7 +1918,7 @@ const Header = () => {
             /* @__PURE__ */ jsxs(
               "a",
               {
-                href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+                href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
                 target: "_blank",
                 rel: "noopener noreferrer",
                 className: "hidden lg:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white hover:bg-teal-50 text-teal-900 text-sm font-bold shadow-lg transition-all duration-300 hover:scale-105",
@@ -1965,7 +1965,7 @@ const Header = () => {
           /* @__PURE__ */ jsxs(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               onClick: () => setIsMobileMenuOpen(false),
@@ -2426,7 +2426,7 @@ const ScrollAnimation = ({
     }
   );
 };
-const BOOKING_URL = "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login";
+const BOOKING_URL = "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login";
 const Hero = ({
   title,
   subtitle,
@@ -2607,8 +2607,8 @@ const HeadingScrollAnimation = ({
   );
 };
 const SEO = ({
-  title = "Hampton Hill Physiotherapy | Pain Relief & Injury Care",
-  description = "Trusted physiotherapy clinic in Hampton Hill. Specialising in pain relief, sports injuries & rehabilitation. HCPC registered therapists. Insurance accepted. Call 0203 818 1238.",
+  title = "Expert Physiotherapy London | Body First UK Clinic",
+  description = "Expert physiotherapy & wellness clinic in Hampton Hill, London. Sports massage, dry needling, shockwave therapy & more. HCPC & CSP registered. Insurance accepted. From £65. Book online today.",
   canonical,
   ogImage = "https://bodyfirst.uk/images/social-share-1200x630.png",
   ogType = "website",
@@ -2648,7 +2648,7 @@ const SEO = ({
     updateMetaTag("og:image", ogImage, true);
     updateMetaTag("og:image:width", "1200", true);
     updateMetaTag("og:image:height", "630", true);
-    updateMetaTag("og:image:alt", "Body First UK - Your Local Physio in Hampton Hill for Pain Relief & Rehabilitation", true);
+    updateMetaTag("og:image:alt", "Body First UK - Expert Physiotherapy & Wellness Clinic in Hampton Hill, London", true);
     updateMetaTag("og:locale", "en_GB", true);
     updateMetaTag("og:site_name", "Body First UK", true);
     updateMetaTag("twitter:card", "summary_large_image");
@@ -2656,104 +2656,89 @@ const SEO = ({
     updateMetaTag("twitter:title", title);
     updateMetaTag("twitter:description", description);
     updateMetaTag("twitter:image", ogImage);
-    updateMetaTag("twitter:image:alt", "Body First UK - Your Local Physio in Hampton Hill for Pain Relief & Rehabilitation");
+    updateMetaTag("twitter:image:alt", "Body First UK - Expert Physiotherapy & Wellness Clinic in Hampton Hill, London");
     updateMetaTag("twitter:site", "@bodyfirstuk");
     updateMetaTag("theme-color", "#0d9488");
-    if (location.pathname === "/") {
-      let script = document.querySelector('script[type="application/ld+json"]');
-      if (!script) {
-        script = document.createElement("script");
-        script.setAttribute("type", "application/ld+json");
-        document.head.appendChild(script);
-      }
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        "name": "Body First UK",
-        "alternateName": "BODY FIRST UK - Physio & Wellbeing Clinic",
-        "url": baseUrl,
-        "logo": `${baseUrl}/images/logo.png`,
-        "image": ogImage,
-        "description": "Expert physiotherapy and wellness clinic in Hampton Hill, London, offering comprehensive treatment for musculoskeletal conditions, sports injuries, chronic pain, and rehabilitation.",
-        "telephone": "+442038181238",
-        "email": "info@bodyfirst.uk",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "38 High Street, Hampton Hill",
-          "addressLocality": "Hampton",
-          "addressRegion": "London",
-          "postalCode": "TW12 1PD",
-          "addressCountry": "GB"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "51.4256928",
-          "longitude": "-0.3568561"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Hampton Hill"
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "20:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Sunday",
-            "opens": "11:00",
-            "closes": "20:00"
-          }
+    document.querySelectorAll("script[data-seo-component]").forEach((el) => el.remove());
+    const injectSchema = (data) => {
+      const script = document.createElement("script");
+      script.setAttribute("type", "application/ld+json");
+      script.setAttribute("data-seo-component", "true");
+      script.textContent = JSON.stringify(data);
+      document.head.appendChild(script);
+    };
+    if (location.pathname !== "/") {
+      const breadcrumbMap = {
+        "/services": [
+          { name: "Home", url: baseUrl },
+          { name: "Services", url: `${baseUrl}/services` }
         ],
-        "priceRange": "££",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "200",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "sameAs": [
-          "https://www.facebook.com/share/17pz212NhW/",
-          "https://www.instagram.com/bodyfirstuk",
-          "https://twitter.com/bodyfirstuk",
-          "https://www.google.com/maps/place/BODY+FIRST+UK+-+Physio+%26+Wellbeing+Clinic/@51.4256928,-0.3568561,17z"
+        "/what-we-treat": [
+          { name: "Home", url: baseUrl },
+          { name: "What We Treat", url: `${baseUrl}/what-we-treat` }
         ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Physiotherapy Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "MedicalTherapy",
-                "name": "Physiotherapy",
-                "description": "Expert assessment and treatment for musculoskeletal conditions, pain relief, and injury rehabilitation"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "MedicalTherapy",
-                "name": "Sports Massage",
-                "description": "Deep tissue massage for recovery, flexibility, and performance enhancement"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "MedicalTherapy",
-                "name": "Shockwave Therapy",
-                "description": "Non-invasive treatment for chronic injuries and pain management"
-              }
-            }
-          ]
-        }
+        "/about": [
+          { name: "Home", url: baseUrl },
+          { name: "About Us", url: `${baseUrl}/about` }
+        ],
+        "/prices": [
+          { name: "Home", url: baseUrl },
+          { name: "Pricing & Insurance", url: `${baseUrl}/prices` }
+        ],
+        "/contact": [
+          { name: "Home", url: baseUrl },
+          { name: "Contact", url: `${baseUrl}/contact` }
+        ],
+        "/why-us": [
+          { name: "Home", url: baseUrl },
+          { name: "Why Us", url: `${baseUrl}/why-us` }
+        ]
       };
-      script.textContent = JSON.stringify(schemaData);
+      const pathSegments = location.pathname.split("/").filter(Boolean);
+      let crumbs = breadcrumbMap[location.pathname];
+      if (!crumbs && pathSegments.length >= 2) {
+        const parentPath = `/${pathSegments[0]}`;
+        const parentCrumbs = breadcrumbMap[parentPath];
+        if (parentCrumbs) {
+          crumbs = [
+            ...parentCrumbs,
+            {
+              name: pathSegments[pathSegments.length - 1].split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" "),
+              url: currentUrl
+            }
+          ];
+        }
+      }
+      if (crumbs && crumbs.length > 0) {
+        injectSchema({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": crumbs.map((crumb, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": crumb.name,
+            "item": crumb.url
+          }))
+        });
+      }
+      if (location.pathname.startsWith("/services/")) {
+        const serviceName = pathSegments[pathSegments.length - 1].split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+        injectSchema({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": serviceName,
+          "provider": {
+            "@type": "Physiotherapy",
+            "name": "Body First UK",
+            "url": baseUrl
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "London"
+          },
+          "url": currentUrl
+        });
+      }
     }
   }, [title, description, canonical, ogImage, ogType, noindex, location.pathname, currentUrl]);
   return null;
@@ -2802,6 +2787,10 @@ const Home = () => {
         backgroundVideo: "/videos/hero.mp4"
       }
     ),
+    /* @__PURE__ */ jsx("section", { className: "py-12 bg-gradient-to-b from-slate-50 to-white", children: /* @__PURE__ */ jsx("div", { className: "container px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-4xl mx-auto text-center", children: [
+      /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-black text-slate-900 mb-4 tracking-tight", children: "Your Trusted Physiotherapy Clinic in Hampton Hill, London" }),
+      /* @__PURE__ */ jsx("p", { className: "text-lg text-slate-600 leading-relaxed", children: "Body First UK is a specialist physiotherapy and wellness clinic offering expert treatment for back pain, sports injuries, neck pain, shoulder problems, knee conditions, and post-surgical rehabilitation. Our HCPC and CSP registered physiotherapists deliver personalised care using advanced techniques including sports massage, dry needling, shockwave therapy, and ultrasound therapy. With 200+ five-star Google reviews, transparent pricing from £65, and all major health insurance accepted, we're here to help you move better and live pain-free." })
+    ] }) }) }),
     /* @__PURE__ */ jsx("section", { className: "py-16 bg-white/80 backdrop-blur-sm", children: /* @__PURE__ */ jsx("div", { className: "container px-4 relative z-10", children: /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6", children: [
       /* @__PURE__ */ jsx(Link, { to: "/what-we-treat", className: "group", children: /* @__PURE__ */ jsxs("div", { className: "h-full p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:border-teal-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-4 transition-all duration-300", children: [
         /* @__PURE__ */ jsx("div", { className: "w-14 h-14 mb-6 rounded-2xl bg-teal-50 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-500", children: "🩺" }),
@@ -2830,7 +2819,7 @@ const Home = () => {
           /* @__PURE__ */ jsx("span", { className: "opacity-0 group-hover:opacity-100 transition-all", children: "→" })
         ] })
       ] }) }),
-      /* @__PURE__ */ jsx("a", { href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login", target: "_blank", rel: "noopener noreferrer", className: "group", children: /* @__PURE__ */ jsxs("div", { className: "h-full p-8 rounded-3xl bg-teal-600 shadow-[0_20px_50px_rgba(20,184,166,0.3)] hover:shadow-[0_25px_60px_rgba(20,184,166,0.4)] transition-all duration-500 hover:-translate-y-2 border border-teal-500", children: [
+      /* @__PURE__ */ jsx("a", { href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login", target: "_blank", rel: "noopener noreferrer", className: "group", children: /* @__PURE__ */ jsxs("div", { className: "h-full p-8 rounded-3xl bg-teal-600 shadow-[0_20px_50px_rgba(20,184,166,0.3)] hover:shadow-[0_25px_60px_rgba(20,184,166,0.4)] transition-all duration-500 hover:-translate-y-2 border border-teal-500", children: [
         /* @__PURE__ */ jsx("div", { className: "w-14 h-14 mb-6 rounded-2xl bg-white/20 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-500", children: "📅" }),
         /* @__PURE__ */ jsx("h3", { className: "text-2xl font-black text-white mb-4 tracking-tight", children: "Book Now" }),
         /* @__PURE__ */ jsx("p", { className: "text-teal-50 mb-6 leading-relaxed", children: "Easy online booking. Same-day appointments often available at our London clinic." }),
@@ -3123,7 +3112,7 @@ const Home = () => {
           /* @__PURE__ */ jsxs(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               className: "group relative inline-flex items-center justify-center px-12 py-6 bg-teal-500 text-white rounded-full font-black text-xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(20,184,166,0.5)]",
@@ -3358,7 +3347,7 @@ const WhatWeTreat = () => {
           /* @__PURE__ */ jsx(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               className: "px-10 py-5 bg-teal-500 text-white rounded-full font-black text-xl hover:bg-teal-400 hover:scale-105 transition-all shadow-[0_0_30px_rgba(20,184,166,0.4)]",
@@ -3462,7 +3451,7 @@ const WhatWeTreatDetail = () => {
             /* @__PURE__ */ jsx(
               "a",
               {
-                href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+                href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
                 target: "_blank",
                 rel: "noopener noreferrer",
                 className: "bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 hover:shadow-2xl shadow-teal-500/20",
@@ -3600,7 +3589,7 @@ const WhatWeTreatDetail = () => {
           /* @__PURE__ */ jsx(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               className: "bg-white text-teal-700 px-12 py-5 rounded-full font-black text-xl hover:bg-teal-50 transition-colors shadow-2xl",
@@ -3844,7 +3833,7 @@ const Services = () => {
           /* @__PURE__ */ jsx(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               className: "px-10 py-5 bg-teal-500 text-white rounded-full font-black text-xl hover:bg-teal-400 hover:scale-105 transition-all shadow-[0_0_30px_rgba(20,184,166,0.4)]",
@@ -3942,7 +3931,7 @@ const ServiceDetailPage = () => {
             /* @__PURE__ */ jsx(
               "a",
               {
-                href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+                href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
                 target: "_blank",
                 rel: "noopener noreferrer",
                 className: "bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 hover:shadow-2xl shadow-teal-500/20",
@@ -4084,7 +4073,7 @@ const ServiceDetailPage = () => {
           /* @__PURE__ */ jsx(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               className: "bg-white text-teal-700 px-12 py-5 rounded-full font-black text-xl hover:bg-teal-50 transition-colors shadow-2xl",
@@ -4397,7 +4386,7 @@ const About = () => {
           /* @__PURE__ */ jsx(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               className: "px-10 py-5 bg-teal-500 text-white rounded-full font-black text-xl hover:bg-teal-400 hover:scale-105 transition-all shadow-[0_0_30px_rgba(20,184,166,0.4)]",
@@ -4460,7 +4449,7 @@ const PricingCards = () => {
             /* @__PURE__ */ jsxs(
               "a",
               {
-                href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+                href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
                 target: "_blank",
                 rel: "noopener noreferrer",
                 className: "inline-flex items-center justify-center bg-slate-900 text-white font-black py-3 px-5 rounded-2xl hover:bg-teal-600 transition-all duration-300 text-sm shadow-lg shadow-slate-900/10 group-hover:shadow-teal-600/20",
@@ -4531,7 +4520,7 @@ const PricesInsurance = () => {
         /* @__PURE__ */ jsxs(
           "a",
           {
-            href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+            href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
             target: "_blank",
             rel: "noopener noreferrer",
             className: "group relative inline-flex items-center justify-center px-10 py-5 bg-teal-500 text-white rounded-full font-black text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-[0_10px_30px_rgba(20,184,166,0.3)] shrink-0",
@@ -4619,7 +4608,7 @@ const PricesInsurance = () => {
           /* @__PURE__ */ jsx(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               className: "px-10 py-5 bg-teal-500 text-white rounded-full font-black text-xl hover:bg-teal-400 hover:scale-105 transition-all shadow-[0_0_30px_rgba(20,184,166,0.4)]",
@@ -4986,7 +4975,7 @@ const Contact = () => {
           /* @__PURE__ */ jsx(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               className: "px-10 py-5 border-2 border-white/30 text-white rounded-full font-black text-xl hover:bg-white/10 transition-all backdrop-blur-sm shadow-xl",
@@ -5173,7 +5162,7 @@ const WhyUs = () => {
           /* @__PURE__ */ jsx(
             "a",
             {
-              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.clinic#login",
+              href: "https://app.theclinicportal.com/?Email=info@bodyfirst.uk#login",
               target: "_blank",
               rel: "noopener noreferrer",
               className: "px-10 py-5 bg-teal-500 text-white rounded-full font-black text-xl hover:bg-teal-400 hover:scale-105 transition-all shadow-[0_0_30px_rgba(20,184,166,0.4)]",
