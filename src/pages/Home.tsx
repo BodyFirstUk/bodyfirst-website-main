@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollAnimation from '../components/ScrollAnimation';
 import Hero from '../components/Hero';
@@ -9,7 +10,79 @@ import { siteContent } from '../data/content';
 import { servicesData } from '../data/servicesData';
 import AntigravityCanvas from '../components/AntigravityCanvas';
 
+const faqs = [
+  {
+    q: 'What services does Body First UK offer?',
+    a: 'Body First UK offers physiotherapy, sports massage, dry needling, shockwave therapy, ultrasound therapy, cupping therapy, lymphatic drainage, and foot scan & gait analysis.',
+  },
+  {
+    q: 'Where is Body First UK located?',
+    a: 'Body First UK is located at 38 High Street, Hampton Hill, Hampton, London, TW12 1PD.',
+  },
+  {
+    q: 'Does Body First UK accept health insurance?',
+    a: 'Yes, Body First UK works with all major private health insurance providers including BUPA, AXA, Aviva, Vitality, Healix, Simply Health, and WPA.',
+  },
+  {
+    q: 'How much does physiotherapy cost at Body First UK?',
+    a: 'Treatment at Body First UK starts from £65. Visit the pricing page for full details or contact the clinic directly.',
+  },
+  {
+    q: "What are Body First UK's opening hours?",
+    a: 'Body First UK is open Monday to Friday 9am to 8pm and Sunday 11am to 8pm. The clinic is closed on Saturdays.',
+  },
+  {
+    q: 'Are the physiotherapists at Body First UK qualified?',
+    a: 'Yes, all physiotherapists at Body First UK are HCPC registered and members of the Chartered Society of Physiotherapy (CSP). The lead physiotherapist holds a BSc in Physiotherapy, MSc in Advanced Physiotherapy, and MPhil in Shockwave Therapy.',
+  },
+];
+
+interface FAQItemProps {
+  q: string;
+  a: string;
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+const FAQItem = ({ q, a, isOpen, onToggle }: FAQItemProps) => {
+  return (
+    <div className="border-b border-slate-200 last:border-b-0">
+      <button
+        onClick={onToggle}
+        aria-expanded={isOpen}
+        className="flex w-full items-center justify-between gap-4 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 rounded-lg"
+      >
+        <span className="text-lg md:text-xl font-black text-slate-900 tracking-tight">
+          {q}
+        </span>
+        <span
+          className={`flex-shrink-0 w-9 h-9 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 transition-transform duration-300 ${
+            isOpen ? 'rotate-180' : ''
+          }`}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+          </svg>
+        </span>
+      </button>
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${
+          isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p className="pb-6 pr-12 text-base md:text-lg text-slate-600 leading-relaxed font-medium">
+            {a}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Home = () => {
+  const [openFaq, setOpenFaq] = useState<number>(0);
+
   return (
     <div>
       <SEO title={seoConfig.home.title} description={seoConfig.home.description} canonical={'https://bodyfirst.uk/'} />
@@ -408,6 +481,35 @@ const Home = () => {
         </div>
       </section>
 
+      {/* FAQ Section - Collapsible Panels */}
+      <section className="py-24 bg-transparent">
+        <div className="container px-4 relative z-10">
+          <div className="text-center mb-16">
+            <HeadingScrollAnimation as="h2" className="text-4xl md:text-5xl font-black text-slate-900 mb-6" variant="fade-up">
+              Frequently Asked <span className="text-teal-600">Questions</span>
+            </HeadingScrollAnimation>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              Everything you need to know about our clinic, treatments, and how to get started.
+            </p>
+          </div>
+
+          <ScrollAnimation
+            variant="fade-up"
+            className="max-w-3xl mx-auto rounded-[2.5rem] bg-white border border-slate-200 shadow-sm px-6 md:px-10"
+          >
+            {faqs.map((item, i) => (
+              <FAQItem
+                key={i}
+                q={item.q}
+                a={item.a}
+                isOpen={openFaq === i}
+                onToggle={() => setOpenFaq(openFaq === i ? -1 : i)}
+              />
+            ))}
+          </ScrollAnimation>
+        </div>
+      </section>
+
       {/* Final CTA - Ultra Premium */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-slate-900" />
@@ -454,6 +556,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
