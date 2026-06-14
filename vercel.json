@@ -66,6 +66,9 @@
   ],
 
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  { "source": "/blog", "destination": "https://project-nv226.vercel.app/blog" },
+  { "source": "/blog/", "destination": "https://project-nv226.vercel.app/blog" },
+  { "source": "/blog/:path*", "destination": "https://project-nv226.vercel.app/blog/:path*" },
+  { "source": "/(.*)", "destination": "/index.html" }
+]
 }
