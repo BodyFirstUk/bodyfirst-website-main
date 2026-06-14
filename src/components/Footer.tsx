@@ -75,7 +75,7 @@ const Footer = () => {
               <li>
                 <a href="/blog" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   Blog
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
