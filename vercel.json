@@ -65,10 +65,9 @@
     { "source": "/we-can-treat-a-number-of-conditions.html", "destination": "/what-we-treat", "permanent": true }
   ],
 
-  "rewrites": [
-  { "source": "/blog", "destination": "https://project-nv226.vercel.app/blog" },
-  { "source": "/blog/", "destination": "https://project-nv226.vercel.app/blog" },
-  { "source": "/blog/:path*", "destination": "https://project-nv226.vercel.app/blog/:path*" },
+"rewrites": [
+  { "source": "/blog", "destination": "https://project-nv226.vercel.app" },
+  { "source": "/blog/:path*", "destination": "https://project-nv226.vercel.app/:path*" },
   { "source": "/(.*)", "destination": "/index.html" }
 ]
 }
