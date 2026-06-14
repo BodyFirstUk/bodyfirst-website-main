@@ -73,7 +73,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="https://bodyfirst.uk/blog" className="text-gray-400 hover:text-white transition-colors">
+                <a href="/blog" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   Blog
                 </Link>
               </li>
