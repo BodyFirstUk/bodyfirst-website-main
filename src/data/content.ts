@@ -96,6 +96,13 @@ export const siteContent = {
         "Localised Cryoair therapy uses controlled cold temperatures to reduce inflammation, manage pain, and speed up the healing process. Ideal for acute injuries and chronic inflammatory conditions.",
       icon: "❄️",
     },
+    {
+      id: 'osteopathy',
+      name: 'Osteopathy',
+      shortDesc: 'Whole-body manual therapy to restore balance, relieve pain, and improve function.',
+      description: 'Osteopathy uses hands-on techniques including soft tissue manipulation, joint mobilisation, and cranial approaches to treat the root cause of pain and dysfunction. Our osteopath takes a whole-body approach, addressing not just the symptoms but the underlying structural and functional imbalances.',
+      icon: '🦴'
+    },
   ],
 
   conditions: [
@@ -233,10 +240,10 @@ export const siteContent = {
     },
     {
       name: "Mihai Apostol",
-      role: "Sports Massage Therapist",
-      qualifications: "• BSc (Hons) Osteopathic Medicine (to complete 2026)",
+      role: "• Osteopath • Sports Massage Therapist",
+      qualifications: "• BSc (Hons) Osteopathic Medicine • GOsC Registered",
       description:
-        "Experienced sports massage therapist with over a decade of work in improving human movement. Currently studying osteopathy at the British School of Osteopathic Medicine, with a strong interest in biomechanics, posture, and restoring optimal movement patterns. Supports patients with postural strain, asymmetrical patterns, and sedentary lifestyle-related issues.",
+        "Qualified osteopath and experienced sports massage therapist with over a decade of work in improving human movement. Graduated from the British School of Osteopathic Medicine, Mihai combines osteopathic principles with a strong background in biomechanics, posture, and restoring optimal movement patterns. Treats a wide range of musculoskeletal conditions with a whole-body, patient-centred approach.",
       image: "/images/Aboutus/newone.jpeg",
     },
 
