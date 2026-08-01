@@ -82,6 +82,73 @@ export const servicesData: Service[] = [
   },
 
   {
+    slug: "osteopathy",
+    name: "Osteopathy",
+    shortDescription:
+      "Whole-body manual therapy to restore balance, relieve pain, and improve overall function.",
+    heroDescription:
+      "Our osteopathic treatments use hands-on techniques to diagnose, treat, and prevent a wide range of musculoskeletal conditions by addressing the root cause of pain and dysfunction.",
+    heroImage: "/images/services/osteopathy.jpg",
+    heroAlt: "Osteopathy treatment session",
+    sections: [
+      {
+        title: "What is Osteopathy?",
+        body:
+          "Osteopathy is a primary healthcare profession that focuses on the diagnosis, treatment, and prevention of musculoskeletal disorders. Osteopaths use a holistic, whole-body approach — recognising that the body's structure and function are closely linked. Using hands-on techniques such as soft tissue manipulation, joint mobilisation, articulation, and cranial osteopathy, we aim to restore balance, improve circulation, and support the body's natural ability to heal itself.",
+      },
+      {
+        title: "Who is it for?",
+        body:
+          "Osteopathy is suitable for people of all ages and activity levels — from newborns to the elderly. Whether you're dealing with acute pain, chronic discomfort, or looking to optimise your physical wellbeing, osteopathic treatment is tailored to your individual needs.",
+        bullets: [
+          "People with back, neck, or joint pain",
+          "Office workers with postural strain",
+          "Athletes seeking injury prevention and recovery",
+          "Pregnant women experiencing musculoskeletal discomfort",
+          "Individuals with headaches or migraines",
+          "Those with chronic pain or recurring injuries",
+          "Anyone wanting to improve overall mobility and function",
+        ],
+      },
+      {
+        title: "Conditions We Commonly Treat",
+        body:
+          "Our osteopath has extensive experience treating a wide range of conditions:",
+        bullets: [
+          "Lower back pain and sciatica",
+          "Neck pain and cervicogenic headaches",
+          "Shoulder, hip, and knee pain",
+          "Postural dysfunction and repetitive strain",
+          "Sports injuries and overuse syndromes",
+          "Arthritic and degenerative joint conditions",
+          "Jaw pain and TMJ dysfunction",
+          "Pregnancy-related musculoskeletal pain",
+        ],
+      },
+      {
+        title: "What to Expect in Your Session",
+        body:
+          "Your first appointment begins with a thorough case history and physical examination, including assessment of your posture, movement, and areas of concern. Your osteopath will then use a combination of hands-on techniques — including stretching, massage, joint mobilisation, and manipulation — tailored to your specific condition. You'll also receive guidance on exercises, posture, and lifestyle modifications to support your recovery. Initial appointments typically last 45–60 minutes, with follow-up sessions lasting 30–45 minutes.",
+      },
+      {
+        title: "Benefits",
+        body:
+          "Regular osteopathic treatment can provide wide-ranging benefits for your health and quality of life:",
+        bullets: [
+          "Effective relief from acute and chronic pain",
+          "Improved posture, alignment, and body awareness",
+          "Enhanced joint mobility and flexibility",
+          "Reduced muscle tension and spasms",
+          "Better circulation and tissue healing",
+          "Holistic approach treating the cause, not just symptoms",
+          "Drug-free and non-invasive treatment option",
+          "Personalised care for long-term wellbeing",
+        ],
+      },
+    ],
+  },
+
+  {
     slug: "sports-massage",
     name: "Sports Massage",
     shortDescription:
@@ -665,73 +732,6 @@ export const servicesData: Service[] = [
           "Supports faster recovery when properly timed",
           "Safe, non-invasive pain management",
           "Effective complement to other treatments",
-        ],
-      },
-    ],
-  },
-
-  {
-    slug: "osteopathy",
-    name: "Osteopathy",
-    shortDescription:
-      "Whole-body manual therapy to restore balance, relieve pain, and improve overall function.",
-    heroDescription:
-      "Our osteopathic treatments use hands-on techniques to diagnose, treat, and prevent a wide range of musculoskeletal conditions by addressing the root cause of pain and dysfunction.",
-    heroImage: "/images/services/osteopathy.jpg",
-    heroAlt: "Osteopathy treatment session",
-    sections: [
-      {
-        title: "What is Osteopathy?",
-        body:
-          "Osteopathy is a primary healthcare profession that focuses on the diagnosis, treatment, and prevention of musculoskeletal disorders. Osteopaths use a holistic, whole-body approach — recognising that the body's structure and function are closely linked. Using hands-on techniques such as soft tissue manipulation, joint mobilisation, articulation, and cranial osteopathy, we aim to restore balance, improve circulation, and support the body's natural ability to heal itself.",
-      },
-      {
-        title: "Who is it for?",
-        body:
-          "Osteopathy is suitable for people of all ages and activity levels — from newborns to the elderly. Whether you're dealing with acute pain, chronic discomfort, or looking to optimise your physical wellbeing, osteopathic treatment is tailored to your individual needs.",
-        bullets: [
-          "People with back, neck, or joint pain",
-          "Office workers with postural strain",
-          "Athletes seeking injury prevention and recovery",
-          "Pregnant women experiencing musculoskeletal discomfort",
-          "Individuals with headaches or migraines",
-          "Those with chronic pain or recurring injuries",
-          "Anyone wanting to improve overall mobility and function",
-        ],
-      },
-      {
-        title: "Conditions We Commonly Treat",
-        body:
-          "Our osteopath has extensive experience treating a wide range of conditions:",
-        bullets: [
-          "Lower back pain and sciatica",
-          "Neck pain and cervicogenic headaches",
-          "Shoulder, hip, and knee pain",
-          "Postural dysfunction and repetitive strain",
-          "Sports injuries and overuse syndromes",
-          "Arthritic and degenerative joint conditions",
-          "Jaw pain and TMJ dysfunction",
-          "Pregnancy-related musculoskeletal pain",
-        ],
-      },
-      {
-        title: "What to Expect in Your Session",
-        body:
-          "Your first appointment begins with a thorough case history and physical examination, including assessment of your posture, movement, and areas of concern. Your osteopath will then use a combination of hands-on techniques — including stretching, massage, joint mobilisation, and manipulation — tailored to your specific condition. You'll also receive guidance on exercises, posture, and lifestyle modifications to support your recovery. Initial appointments typically last 45–60 minutes, with follow-up sessions lasting 30–45 minutes.",
-      },
-      {
-        title: "Benefits",
-        body:
-          "Regular osteopathic treatment can provide wide-ranging benefits for your health and quality of life:",
-        bullets: [
-          "Effective relief from acute and chronic pain",
-          "Improved posture, alignment, and body awareness",
-          "Enhanced joint mobility and flexibility",
-          "Reduced muscle tension and spasms",
-          "Better circulation and tissue healing",
-          "Holistic approach treating the cause, not just symptoms",
-          "Drug-free and non-invasive treatment option",
-          "Personalised care for long-term wellbeing",
         ],
       },
     ],

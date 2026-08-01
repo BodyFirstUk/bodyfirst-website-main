@@ -40,6 +40,13 @@ export const siteContent = {
       icon: '🏥'
     },
     {
+      id: 'osteopathy',
+      name: 'Osteopathy',
+      shortDesc: 'Whole-body manual therapy to restore balance, relieve pain, and improve function.',
+      description: 'Osteopathy uses hands-on techniques including soft tissue manipulation, joint mobilisation, and cranial approaches to treat the root cause of pain and dysfunction. Our osteopath takes a whole-body approach, addressing not just the symptoms but the underlying structural and functional imbalances.',
+      icon: '🦴'
+    },
+    {
       id: 'sports-massage',
       name: 'Sports Massage',
       shortDesc: 'Deep tissue massage to relieve muscle tension, improve flexibility, and enhance recovery.',
@@ -95,13 +102,6 @@ export const siteContent = {
       description:
         "Localised Cryoair therapy uses controlled cold temperatures to reduce inflammation, manage pain, and speed up the healing process. Ideal for acute injuries and chronic inflammatory conditions.",
       icon: "❄️",
-    },
-    {
-      id: 'osteopathy',
-      name: 'Osteopathy',
-      shortDesc: 'Whole-body manual therapy to restore balance, relieve pain, and improve function.',
-      description: 'Osteopathy uses hands-on techniques including soft tissue manipulation, joint mobilisation, and cranial approaches to treat the root cause of pain and dysfunction. Our osteopath takes a whole-body approach, addressing not just the symptoms but the underlying structural and functional imbalances.',
-      icon: '🦴'
     },
   ],
 
@@ -159,6 +159,8 @@ export const siteContent = {
   prices: [
     { service: 'Initial Appointment', duration: '45 min', price: '£75', category: 'Physiotherapy' },
     { service: '30 min Physiotherapy', duration: '30 min', price: '£65', category: 'Physiotherapy' },
+    { service: 'Initial Appointment', duration: '45-60 min', price: '£75', category: 'Osteopathy' },
+    { service: 'Follow up', duration: '30-45 min', price: '£65', category: 'Osteopathy' },
     { service: '30 min Sports Massage', duration: '30 min', price: '£50', category: 'Sports Massage' },
     { service: '45 min Sports Massage', duration: '45 min', price: '£60', category: 'Sports Massage' },
     { service: '60 min Sports Massage', duration: '60 min', price: '£70', category: 'Sports Massage' },
