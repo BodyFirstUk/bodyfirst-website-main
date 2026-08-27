@@ -4,7 +4,7 @@ export const seoConfig = {
         description: 'Expert physiotherapy & wellness in Hampton, London. Sports massage, dry needling, shockwave therapy. HCPC registered. Insurance accepted. Book online today.',
     },
     about: {
-        title: 'About Us | Body First UK Physiotherapy Clinic',
+        title: 'About Us | Physiotherapy Clinic in Hampton Hill',
         description: 'Meet our HCPC registered physiotherapy team in Hampton, London. Expert care, evidence-based treatment, and patient-centred approach since day one.',
     },
     services: {
@@ -12,11 +12,11 @@ export const seoConfig = {
         description: 'Comprehensive physiotherapy services: sports massage, dry needling, shockwave therapy, gait analysis, cupping & more. Book your treatment today.',
     },
     whatWeTreat: {
-        title: 'Conditions We Treat | Body First UK Physiotherapy',
+        title: 'Conditions We Treat | Physiotherapy Treatment in London',
         description: 'Expert treatment for back pain, sports injuries, knee pain, shoulder issues, chronic conditions & more. HCPC registered physiotherapists in Hampton, London.',
     },
     prices: {
-        title: 'Pricing & Insurance | Body First UK Physiotherapy',
+        title: 'Pricing & Insurance | Physiotherapy in Hampton Hill',
         description: 'Transparent physiotherapy pricing from £65. We accept all major insurance providers including BUPA, AXA, Aviva. Book online or call today.',
     },
     contact: {
